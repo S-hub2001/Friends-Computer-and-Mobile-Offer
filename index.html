@@ -1,315 +1,185 @@
 <!DOCTYPE html>
 <html lang="bn">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ফ্রেন্ডস কম্পিউটার ও মোবাইল</title>
-
-    <!-- Tailwind CSS CDN for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts: Noto Sans Bengali -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <style>
-        /* Apply Bengali font to the whole page */
-        body {
-            font-family: 'Noto Sans Bengali', sans-serif;
-            /* Modern gradient background */
-            background-color: #f8fafc;
-            /* Fallback color */
-            background-image: linear-gradient(to top right, #f1f5f9, #e0f2fe);
-        }
-
-        /* Animation for cards */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-            /* Start hidden */
-        }
-
-        /* Custom styles for better visual appeal */
-        .card {
-            background-color: rgba(255, 255, 255, 0.85);
-            /* Slightly transparent */
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 16px;
-            /* More rounded */
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            /* 24px */
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            /* More space */
-            color: #1e293b;
-            /* Slate 800 */
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-        }
-
-        .list-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .list-item-icon {
-            color: #0d9488;
-            /* Teal 600 */
-            margin-right: 1rem;
-            flex-shrink: 0;
-            margin-top: 5px;
-            background-color: #ccfbf1;
-            /* Teal 100 */
-            border-radius: 9999px;
-            padding: 4px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Assigning animation delay to each card */
-        section.card:nth-of-type(1) {
-            animation-delay: 0.1s;
-        }
-
-        section.card:nth-of-type(2) {
-            animation-delay: 0.2s;
-        }
-
-        section.card:nth-of-type(3) {
-            animation-delay: 0.3s;
-        }
-
-        section.card:nth-of-type(4) {
-            animation-delay: 0.4s;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>দুর্গাপূজার ক্যাশব্যাক অফার</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .step {
+      transition: opacity 0.5s ease-in-out;
+    }
+    .step.hidden {
+      display: none;
+    }
+    .fade-in {
+      opacity: 1;
+    }
+    .fade-out {
+      opacity: 0;
+    }
+  </style>
 </head>
+<body class="bg-gradient-to-br from-orange-100 via-red-100 to-pink-100 flex items-center justify-center min-h-screen p-4">
 
-<body class="bg-gray-50 text-gray-800">
+  <div class="bg-white/80 backdrop-blur-sm shadow-2xl rounded-3xl w-full max-w-lg p-6 sm:p-8">
 
-    <!-- Main container -->
-    <div class="max-w-2xl mx-auto p-4 sm:p-6">
-
-        <!-- Promotional Banner -->
-        <div class="bg-gradient-to-r from-rose-500 to-amber-500 text-white text-center font-bold p-4 rounded-xl mb-8 shadow-lg fade-in-up"
-            style="animation-delay: 0s;">
-            <p class="text-lg animate-pulse">দুর্গাপূজার অফার! খুব কম সময়ের জন্য, সুযোগ লুটে নিন!</p>
-        </div>
-
-        <!-- Shop Details Card -->
-        <section class="card fade-in-up">
-            <h2 class="section-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-teal-600">
-                    <path
-                        d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18M11 12H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h8m1-7h8a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-8" />
-                </svg>
-                <span>দোকানের বিবরণ</span>
-            </h2>
-            <div class="space-y-4 text-lg text-slate-700">
-                <p><strong>দোকানের নাম:</strong> Friends Computer and Mobile</p>
-                <p><strong>যোগাযোগের ব্যক্তি:</strong> সুজিত বরম</p>
-                <p>
-                    <strong>ফোন:</strong>
-                    <a href="tel:8967992203" class="text-teal-600 font-semibold hover:text-teal-700 transition-colors">
-                        8967992203
-                    </a>
-                </p>
-                <p><strong>ঠিকানা:</strong>
-                    <a href="https://maps.app.goo.gl/EE9tYVShgbytBeom6" target="_blank"
-                        style="color:#2980b9; text-decoration:none;">
-                        Go To Map
-                    </a>
-                </p>
-
-            </div>
-        </section>
-
-        <!-- Offers Section -->
-        <section class="card fade-in-up">
-            <h2 class="section-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-rose-500">
-                    <path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z" />
-                    <path d="M12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                </svg>
-                <span>💰 দারুণ অফার</span>
-            </h2>
-            <ul class="space-y-3 text-slate-700">
-                <li class="list-item">
-                    <span class="list-item-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </span>
-                    <span>২০০ টাকার কেনাকাটায় → <strong>২০ টাকা রিটার্ন</strong></span>
-                </li>
-                <li class="list-item">
-                    <span class="list-item-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </span>
-                    <span>৫০০ টাকার কেনাকাটায় → <strong>৫০ টাকা রিটার্ন</strong></span>
-                </li>
-                <li class="list-item">
-                    <span class="list-item-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </span>
-                    <span>৮০০ টাকার কেনাকাটায় → <strong>১০০ টাকা রিটার্ন</strong></span>
-                </li>
-                <li class="list-item">
-                    <span class="list-item-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-                        </svg>
-                    </span>
-                    <span>১০০০ টাকার কেনাকাটায় → <strong>২০০ টাকা রিটার্ন</strong></span>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Coupon Steps Section -->
-        <section class="card fade-in-up">
-            <h2 class="section-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-amber-500">
-                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-                    <path d="M4 22h16" />
-                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-                    <path d="M9.17 9a3 3 0 0 0-2.17 1h10a3 3 0 0 0-2.17-1Z" />
-                </svg>
-                <span>কুপন জেতার ধাপসমূহ</span>
-            </h2>
-            <ol class="list-decimal list-inside space-y-3 text-lg text-slate-700 pl-4">
-                <li>আমাদের ফেসবুক পেজটি ফলো করুন। <a href="https://www.facebook.com/Friendscomputerandmobile"
-                        target="_blank" rel="noopener noreferrer"
-                        class="text-teal-600 font-semibold hover:text-teal-700 transition-colors">Follow</a></li>
-                <li>পেজের লাস্ট পোস্টটি শেয়ার করুন।</li>
-                <li>নিচের ফর্ম-এ আপনার নাম লিখে 'পাঠান' বোতামে ক্লিক করুন।</li>
-                <li>আপনাকে WhatsApp-এ নিয়ে যাওয়া হবে, সেখানে মেসেজটি পাঠিয়ে দিন।</li>
-                <li>শেয়ার করা পোস্টের লিঙ্কটি WhatsApp-এ শেয়ার করে দিন।</li>
-                <li>আমরা আপনার পোস্ট এবং তারিখ যাচাই করে কুপন দেব।</li>
-                <li>দোকানে কেনাকাটা করতে আসার সময় অবধি পোস্টটি ডিলিট করা যাবে না। কেনাকাটার সময় আপনার শেয়ার করা
-                    পোস্টের তারিখ এবং WhatsApp মেসেজের তারিখ চেক করে অফার দেওয়া হবে।</li>
-            </ol>
-        </section>
-
-        <!-- Name Form Section -->
-        <section class="card fade-in-up">
-            <h2 class="section-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-sky-500">
-                    <path d="M12 22h6a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v5" />
-                    <path d="M14 2v4a2 2 0 0 0 2 2h4" />
-                    <path d="M4 12.5a2.5 2.5 0 0 1 5 0V18a2 2 0 0 1-5 0v-2.5" />
-                    <path d="m4 15 5 0" />
-                </svg>
-                <span>আপনার নাম দিন</span>
-            </h2>
-            <form id="whatsappForm" class="space-y-4">
-                <div>
-                    <label for="userName" class="block text-md font-medium text-slate-700 mb-2">আপনার পুরো নাম
-                        লিখুন:</label>
-                    <input type="text" id="userName" name="userName"
-                        class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition"
-                        placeholder="এখানে নাম লিখুন" required>
-                </div>
-                <button type="submit"
-                    class="w-full flex items-center justify-center gap-2 bg-teal-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-300 transition-all transform hover:scale-105">
-                    <span>WhatsApp-এ পাঠান</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="22" y1="2" x2="11" y2="13" />
-                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                    </svg>
-                </button>
-            </form>
-        </section>
-
-        <!-- Footer -->
-        <footer class="text-center text-slate-500 mt-8 mb-4">
-            <p>&copy; 2024 Friends Computer and Mobile. সকল অধিকার সংরক্ষিত।</p>
-        </footer>
-
+    <!-- Progress Bar -->
+    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-6">
+      <div id="progress-bar" class="bg-gradient-to-r from-red-500 to-orange-500 h-2.5 rounded-full transition-all duration-500" style="width: 25%"></div>
     </div>
 
-    <script>
-        // JavaScript to handle form submission and redirect to WhatsApp
-        document.getElementById('whatsappForm').addEventListener('submit', function (event) {
-            // Prevent the default form submission behavior
-            event.preventDefault();
+    <!-- Step 1: Welcome -->
+    <div id="step-1" class="step text-center">
+      <div class="flex justify-center mb-4">
+        <img src="https://placehold.co/100x100/FEE2E2/C53030?text=🎉" alt="Celebration Icon" class="rounded-full">
+      </div>
+      <h1 class="text-2xl font-bold text-red-700 mb-2">দুর্গাপূজার বিশেষ ক্যাশব্যাক অফার!</h1>
+      <p class="text-gray-600 mb-6">এই উৎসবের মরসুমে, কেনাকাটায় জিতুন আকর্ষণীয় ক্যাশব্যাক।</p>
+      
+      <div class="bg-red-50 text-left border-l-4 border-red-500 p-4 rounded-r-lg mb-6">
+        <p class="font-semibold text-gray-800"><b>দোকানের নাম:</b> Friends Computer and Mobile</p>
+        <p class="text-gray-700"><b>যোগাযোগ:</b> সুজিত বরম (8967992203)</p>
+        <p class="text-gray-700">
+          <b>ঠিকানা:</b> 
+          <a href="https://maps.app.goo.gl/hTKpFxi3kbkWYjEY6" target="_blank" class="text-blue-600 font-semibold hover:underline">View on Map</a>
+        </p>
+      </div>
+      
+      <p class="text-sm text-gray-500 mb-6">অফারটি পেতে মাত্র ৩টি সহজ ধাপ অনুসরণ করুন।</p>
+      <button onclick="showStep(2)" class="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+        অফার শুরু করুন
+      </button>
+    </div>
 
-            // Get the user's name from the input field
-            const userName = document.getElementById('userName').value.trim();
+    <!-- Step 2: User Details -->
+    <div id="step-2" class="step hidden">
+      <h2 class="text-xl font-semibold mb-1 text-gray-800">ধাপ ১: আপনার বিবরণ দিন</h2>
+      <p class="text-gray-500 mb-6">আপনার নাম এবং হোয়াটসঅ্যাপ নম্বর দিন।</p>
+      <div class="space-y-4">
+        <input type="text" id="name" placeholder="আপনার নাম লিখুন" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
+        <input type="tel" id="whatsapp" placeholder="হোয়াটসঅ্যাপ নম্বর" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
+      </div>
+       <div id="step2-message" class="text-center text-sm mt-4 h-5"></div>
+      <button onclick="sendOTP()" class="w-full mt-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+        OTP পাঠান
+      </button>
+    </div>
 
-            if (userName === '') {
-                alert('অনুগ্রহ করে আপনার নাম লিখুন।');
-                return;
-            }
+    <!-- Step 3: OTP Verification -->
+    <div id="step-3" class="step hidden">
+      <h2 class="text-xl font-semibold mb-1 text-gray-800">ধাপ ২: OTP ভেরিফাই করুন</h2>
+      <p class="text-gray-500 mb-6">আপনার নম্বরে পাঠানো ৬-সংখ্যার কোডটি লিখুন।</p>
+      <input type="text" id="otp" placeholder="Enter OTP" class="w-full text-center tracking-[1em] px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
+      <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-3 rounded-r-lg my-4 text-sm">
+        <p>👉 পরীক্ষার জন্য, OTP হল <b>123456</b></p>
+      </div>
+       <div id="step3-message" class="text-center text-sm mt-4 h-5"></div>
+      <button onclick="verifyOTP()" class="w-full mt-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+        ভেরিফাই করুন
+      </button>
+    </div>
 
-            // Define the WhatsApp number and the message
-            const phoneNumber = '918967992203';
-            const message = `আমার নাম: ${userName} আমি Facebook পোস্ট শেয়ার করেছি।`;
+    <!-- Step 4: Cashback Details & Social Share -->
+    <div id="step-4" class="step hidden">
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">ধাপ ৩: ক্যাশব্যাক অফার ও নিয়মাবলী</h2>
+      <div class="space-y-2 mb-6">
+        <div class="flex justify-between items-center bg-red-50 p-3 rounded-lg"><p>২০০ টাকার কেনাকাটায়</p><p class="font-bold text-red-600">২০ টাকা ক্যাশব্যাক</p></div>
+        <div class="flex justify-between items-center bg-green-50 p-3 rounded-lg"><p>৫০০ টাকার কেনাকাটায়</p><p class="font-bold text-green-600">৫০ টাকা ক্যাশব্যাক</p></div>
+        <div class="flex justify-between items-center bg-blue-50 p-3 rounded-lg"><p>৮০০ টাকার কেনাকাটায়</p><p class="font-bold text-blue-600">১০০ টাকা ক্যাশব্যাক</p></div>
+        <div class="flex justify-between items-center bg-orange-50 p-3 rounded-lg"><p>১০০০ টাকার কেনাকাটায়</p><p class="font-bold text-orange-600">২০০ টাকা ক্যাশব্যাক</p></div>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-xl text-sm space-y-3">
+        <p>👉 আমাদের ফেসবুক পেজটি ফলো করুন এবং সর্বশেষ পোস্টটি শেয়ার করুন।</p>
+         <a href="https://www.facebook.com/Friendscomputerandmobile" target="_blank" class="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+            ফেসবুক পেজ ফলো করুন
+        </a>
+        <p class="text-xs text-gray-500 pt-2">ℹ️ দোকানে আপনার শেয়ার করা পোস্ট এবং OTP Date যাচাই করা হবে। পোস্ট ডিলিট করলে অফারটি বাতিল হয়ে যাবে।</p>
+      </div>
+      <button onclick="showStep(5)" class="w-full mt-6 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+        সম্পন্ন করুন
+      </button>
+    </div>
 
-            // Encode the message for the URL
-            const encodedMessage = encodeURIComponent(message);
+    <!-- Step 5: Thank You -->
+    <div id="step-5" class="step hidden text-center">
+        <div class="flex justify-center mb-4">
+            <svg class="w-20 h-20 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        </div>
+      <h2 class="text-2xl font-bold text-green-600 mb-4">✅ ধন্যবাদ! আপনি সফলভাবে রেজিস্টার করেছেন।</h2>
+      <p class="text-gray-700">অবশ্যই দোকানে এসে কেনাকাটা করুন এবং আপনার ক্যাশব্যাক সংগ্রহ করুন।</p>
+      <p class="text-gray-700 mt-2">শুভ দুর্গাপূজা!</p>
+    </div>
+  </div>
 
-            // Create the WhatsApp URL
-            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  <script>
+    const steps = document.querySelectorAll(".step");
+    const progressBar = document.getElementById("progress-bar");
+    const totalSteps = steps.length;
 
-            // Redirect the user to WhatsApp
-            window.location.href = whatsappURL;
-        });
-    </script>
+    function showStep(stepNumber) {
+      const currentProgress = (stepNumber / totalSteps) * 100;
+      progressBar.style.width = `${currentProgress}%`;
 
+      steps.forEach((step, index) => {
+        const stepId = parseInt(step.id.split('-')[1]);
+        if (stepId === stepNumber) {
+          step.classList.remove("hidden");
+          setTimeout(() => step.classList.remove('fade-out'), 10);
+           setTimeout(() => step.classList.add('fade-in'), 10);
+        } else {
+          step.classList.add('fade-out');
+          step.classList.remove('fade-in');
+           setTimeout(() => step.classList.add('hidden'), 500);
+        }
+      });
+    }
+
+    function showMessage(step, message, isError = false) {
+        const messageEl = document.getElementById(`step${step}-message`);
+        messageEl.textContent = message;
+        messageEl.className = isError 
+            ? 'text-center text-sm mt-4 h-5 text-red-500' 
+            : 'text-center text-sm mt-4 h-5 text-green-500';
+    }
+
+
+    function sendOTP() {
+      const name = document.getElementById("name").value;
+      const whatsapp = document.getElementById("whatsapp").value;
+
+      if (name.trim() && whatsapp.trim().length > 9) {
+        showMessage(2, 'OTP সফলভাবে পাঠানো হয়েছে! (ডেমো: 123456)');
+        setTimeout(() => {
+          showStep(3);
+          showMessage(2, ''); // Clear message after transition
+        }, 1500);
+      } else {
+        showMessage(2, 'অনুগ্রহ করে সঠিক নাম এবং হোয়াটসঅ্যাপ নম্বর দিন।', true);
+      }
+    }
+
+    function verifyOTP() {
+      const otp = document.getElementById("otp").value;
+      if (otp === "123456") {
+        showMessage(3, '✅ OTP সফলভাবে ভেরিফাই হয়েছে!');
+        setTimeout(() => {
+          showStep(4);
+          showMessage(3, '');
+        }, 1500);
+      } else {
+        showMessage(3, '❌ ভুল OTP। আবার চেষ্টা করুন।', true);
+      }
+    }
+    
+    // Initialize the first step
+    showStep(1);
+  </script>
 </body>
-
 </html>
