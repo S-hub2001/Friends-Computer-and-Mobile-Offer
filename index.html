@@ -38,21 +38,21 @@
     <!-- Step 1: Welcome -->
     <div id="step-1" class="step text-center">
       <div class="flex justify-center mb-4">
-        <img src="https://png.pngtree.com/png-clipart/20210418/original/pngtree-cash-back-offer-tag-design-png-image_6236729.jpg" alt="Celebration Icon" class="rounded-full">
+        <img src="https://png.pngtree.com/png-clipart/20210418/original/pngtree-cash-back-offer-tag-design-png-image_6236729.jpg" alt="Celebration Icon" class="rounded-full w-32 h-32 object-cover">
       </div>
       <h1 class="text-2xl font-bold text-red-700 mb-2">দুর্গাপূজার বিশেষ ক্যাশব্যাক অফার!</h1>
+      <h2 class="text-xl font-semibold text-orange-600 mb-4">Friends Computer and Mobile Dhamaka Offer</h2>
       <p class="text-gray-600 mb-6">এই উৎসবের মরসুমে, কেনাকাটায় জিতুন আকর্ষণীয় ক্যাশব্যাক।</p>
       
       <div class="bg-red-50 text-left border-l-4 border-red-500 p-4 rounded-r-lg mb-6">
         <p class="font-semibold text-gray-800"><b>দোকানের নাম:</b> Friends Computer and Mobile</p>
-        <p class="text-gray-700"><b>যোগাযোগ:</b> সুজিত বরম (8967992203)</p>
+        <p class="text-gray-700"><b>যোগাযোগ:</b> 8967992203 / 8116600629</p>
         <p class="text-gray-700">
           <b>ঠিকানা:</b> 
           <a href="https://maps.app.goo.gl/hTKpFxi3kbkWYjEY6" target="_blank" class="text-blue-600 font-semibold hover:underline">View on Map</a>
         </p>
       </div>
       
-      <p class="text-sm text-gray-500 mb-6">অফারটি পেতে মাত্র ৩টি সহজ ধাপ অনুসরণ করুন।</p>
       <button onclick="showStep(2)" class="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
         অফার শুরু করুন
       </button>
@@ -61,14 +61,24 @@
     <!-- Step 2: User Details -->
     <div id="step-2" class="step hidden">
       <h2 class="text-xl font-semibold mb-1 text-gray-800">ধাপ ১: আপনার বিবরণ দিন</h2>
-      <p class="text-gray-500 mb-6">আপনার নাম এবং হোয়াটসঅ্যাপ নম্বর দিন।</p>
+      <p class="text-gray-500 mb-6">আপনার নাম, হোয়াটসঅ্যাপ নম্বর এবং আগ্রহের বিষয় জানান।</p>
       <div class="space-y-4">
         <input type="text" id="name" placeholder="আপনার নাম লিখুন" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
         <input type="tel" id="whatsapp" placeholder="হোয়াটসঅ্যাপ নম্বর" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
+        <select id="interest" onchange="checkOtherInterest()" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
+          <option value="">আপনার আগ্রহ নির্বাচন করুন</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Computer">Computer</option>
+          <option value="TV">TV</option>
+          <option value="Home Theatre">Home Theatre</option>
+          <option value="Fridge">Fridge</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="text" id="other-interest" placeholder="আপনার আগ্রহ নির্দিষ্ট করুন" class="w-full hidden px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
       </div>
        <div id="step2-message" class="text-center text-sm mt-4 h-5"></div>
       <button onclick="sendOTP()" class="w-full mt-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-       হোয়াটসঅ্যাপ নম্বরে OTP পাঠান
+        হোয়াটসঅ্যাপ নম্বরে OTP পাঠান
       </button>
     </div>
 
@@ -82,27 +92,21 @@
       </div>
        <div id="step3-message" class="text-center text-sm mt-4 h-5"></div>
       <button onclick="verifyOTP()" class="w-full mt-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-        ভেরিফাই করুন
+         ভেরিফাই করুন
       </button>
     </div>
 
-    <!-- Step 4: Cashback Details & Social Share -->
+    <!-- Step 4: Social Share -->
     <div id="step-4" class="step hidden">
-      <h2 class="text-xl font-semibold mb-4 text-gray-800">ধাপ ৩: ক্যাশব্যাক অফার ও নিয়মাবলী</h2>
-      <div class="space-y-2 mb-6">
-        <div class="flex justify-between items-center bg-red-50 p-3 rounded-lg"><p>২০০ টাকার কেনাকাটায়</p><p class="font-bold text-red-600">২০ টাকা ক্যাশব্যাক</p></div>
-        <div class="flex justify-between items-center bg-green-50 p-3 rounded-lg"><p>৫০০ টাকার কেনাকাটায়</p><p class="font-bold text-green-600">৫০ টাকা ক্যাশব্যাক</p></div>
-        <div class="flex justify-between items-center bg-blue-50 p-3 rounded-lg"><p>৮০০ টাকার কেনাকাটায়</p><p class="font-bold text-blue-600">১০০ টাকা ক্যাশব্যাক</p></div>
-        <div class="flex justify-between items-center bg-orange-50 p-3 rounded-lg"><p>১০০০ টাকার কেনাকাটায়</p><p class="font-bold text-orange-600">২০০ টাকা ক্যাশব্যাক</p></div>
-      </div>
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">ধাপ ৩: ফেসবুক পেজ ফলো করুন</h2>
       <div class="bg-gray-100 p-4 rounded-xl text-sm space-y-3">
-        <p>👉 আমাদের ফেসবুক পেজটি ফলো করুন এবং সর্বশেষ পোস্টটি শেয়ার করুন।</p>
+        <p class="text-base">আপনার ক্যাশব্যাক কোড পেতে, অনুগ্রহ করে আমাদের ফেসবুক পেজটি ফলো করুন এবং সর্বশেষ পোস্টটি শেয়ার করুন।</p>
          <a href="https://www.facebook.com/Friendscomputerandmobile" target="_blank" class="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
             ফেসবুক পেজ ফলো করুন
         </a>
         <p class="text-xs text-gray-500 pt-2">ℹ️ দোকানে আপনার শেয়ার করা পোস্ট এবং OTP Date যাচাই করা হবে। পোস্ট ডিলিট করলে অফারটি বাতিল হয়ে যাবে।</p>
       </div>
-      <button onclick="showStep(5)" class="w-full mt-6 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+      <button onclick="generateCashbackAndFinish()" class="w-full mt-6 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
         সম্পন্ন করুন
       </button>
     </div>
@@ -113,8 +117,12 @@
             <svg class="w-20 h-20 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
         </div>
       <h2 class="text-2xl font-bold text-green-600 mb-4">✅ ধন্যবাদ! আপনি সফলভাবে রেজিস্টার করেছেন।</h2>
+      <div id="cashback-details" class="bg-orange-100 border-2 border-dashed border-orange-400 p-4 rounded-lg mb-4">
+        <!-- Cashback details will be inserted here -->
+      </div>
       <p class="text-gray-700">অবশ্যই দোকানে এসে কেনাকাটা করুন এবং আপনার ক্যাশব্যাক সংগ্রহ করুন।</p>
-      <p class="text-gray-700 mt-2">শুভ দুর্গাপূজা!</p>
+       <p class="text-gray-500 text-sm mt-2">এই কোডটি আপনার হোয়াটসঅ্যাপ নম্বরেও পাঠানো হয়েছে।</p>
+      <p class="text-gray-700 mt-4 font-semibold">শুভ দুর্গাপূজা!</p>
     </div>
   </div>
 
@@ -149,20 +157,48 @@
             : 'text-center text-sm mt-4 h-5 text-green-500';
     }
 
+    function checkOtherInterest() {
+        const interest = document.getElementById('interest').value;
+        const otherInterestInput = document.getElementById('other-interest');
+        if (interest === 'Other') {
+            otherInterestInput.classList.remove('hidden');
+        } else {
+            otherInterestInput.classList.add('hidden');
+        }
+    }
+
 
     function sendOTP() {
-      const name = document.getElementById("name").value;
-      const whatsapp = document.getElementById("whatsapp").value;
+      const name = document.getElementById("name").value.trim();
+      const whatsapp = document.getElementById("whatsapp").value.trim();
+      const interest = document.getElementById("interest").value;
+      const otherInterest = document.getElementById("other-interest").value.trim();
 
-      if (name.trim() && whatsapp.trim().length > 9) {
-        showMessage(2, 'OTP সফলভাবে পাঠানো হয়েছে! (ডেমো: 123456)');
-        setTimeout(() => {
-          showStep(3);
-          showMessage(2, ''); // Clear message after transition
-        }, 1500);
-      } else {
-        showMessage(2, 'অনুগ্রহ করে সঠিক নাম এবং হোয়াটসঅ্যাপ নম্বর দিন।', true);
+      // Simple regex for 10-digit mobile number
+      const mobileRegex = /^[6-9]\d{9}$/;
+
+      if (!name) {
+          showMessage(2, 'অনুগ্রহ করে আপনার নাম লিখুন।', true);
+          return;
       }
+      if (!mobileRegex.test(whatsapp)) {
+        showMessage(2, 'অনুগ্রহ করে একটি বৈধ ১০-সংখ্যার মোবাইল নম্বর দিন।', true);
+        return;
+      }
+      if (!interest) {
+          showMessage(2, 'অনুগ্রহ করে আপনার আগ্রহ নির্বাচন করুন।', true);
+          return;
+      }
+       if (interest === 'Other' && !otherInterest) {
+          showMessage(2, 'অনুগ্রহ করে আপনার আগ্রহ নির্দিষ্ট করুন।', true);
+          return;
+      }
+
+      showMessage(2, 'OTP সফলভাবে পাঠানো হয়েছে! (ডেমো: 123456)');
+      setTimeout(() => {
+        showStep(3);
+        showMessage(2, ''); // Clear message after transition
+      }, 1500);
     }
 
     function verifyOTP() {
@@ -176,6 +212,26 @@
       } else {
         showMessage(3, '❌ ভুল OTP। আবার চেষ্টা করুন।', true);
       }
+    }
+    
+    function generateCashbackAndFinish() {
+        // Generate random cashback amount between 50 and 500
+        const cashbackAmount = Math.floor(Math.random() * (500 - 50 + 1)) + 50;
+        // Generate a unique code
+        const cashbackCode = `FCM${Math.floor(1000 + Math.random() * 9000)}`;
+        
+        const detailsContainer = document.getElementById('cashback-details');
+        detailsContainer.innerHTML = `
+            <p class="text-gray-800">আপনার ক্যাশব্যাক অ্যামাউন্ট:</p>
+            <p class="text-4xl font-bold text-red-600 my-2">₹${cashbackAmount}</p>
+            <p class="text-gray-800">আপনার ক্যাশব্যাক কোড:</p>
+            <p class="text-2xl font-bold text-indigo-600 bg-indigo-100 py-1 px-3 rounded-lg inline-block">${cashbackCode}</p>
+        `;
+        
+        // This is a simulation. In a real app, you would make an API call here to send the WhatsApp message.
+        console.log(`Sending code ${cashbackCode} to WhatsApp.`);
+
+        showStep(5);
     }
     
     // Initialize the first step
