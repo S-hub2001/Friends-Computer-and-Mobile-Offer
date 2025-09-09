@@ -32,7 +32,7 @@
 
     <!-- Progress Bar -->
     <div class="w-full bg-gray-200 rounded-full h-2.5 mb-6">
-      <div id="progress-bar" class="bg-gradient-to-r from-red-500 to-orange-500 h-2.5 rounded-full transition-all duration-500" style="width: 25%"></div>
+      <div id="progress-bar" class="bg-gradient-to-r from-red-500 to-orange-500 h-2.5 rounded-full transition-all duration-500" style="width: 17%"></div>
     </div>
 
     <!-- Step 1: Welcome -->
@@ -61,7 +61,7 @@
     <!-- Step 2: User Details -->
     <div id="step-2" class="step hidden">
       <h2 class="text-xl font-semibold mb-1 text-gray-800">ধাপ ১: আপনার বিবরণ দিন</h2>
-      <p class="text-gray-500 mb-6">আপনার নাম, হোয়াটসঅ্যাপ নম্বর এবং আগ্রহের বিষয় জানান।</p>
+      <p class="text-gray-500 mb-6">আপনার নাম, হোয়াটসঅ্যাপ নম্বর এবং আগ্রহের বিষয় জানান।</p>
       <div class="space-y-4">
         <input type="text" id="name" placeholder="আপনার নাম লিখুন" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
         <input type="tel" id="whatsapp" placeholder="হোয়াটসঅ্যাপ নম্বর" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
@@ -76,7 +76,7 @@
         </select>
         <input type="text" id="other-interest" placeholder="আপনার আগ্রহ নির্দিষ্ট করুন" class="w-full hidden px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
       </div>
-       <div id="step2-message" class="text-center text-sm mt-4 h-5"></div>
+      <div id="step2-message" class="text-center text-sm mt-4 h-5"></div>
       <button onclick="sendOTP()" class="w-full mt-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
         হোয়াটসঅ্যাপ নম্বরে OTP পাঠান
       </button>
@@ -90,19 +90,36 @@
       <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-3 rounded-r-lg my-4 text-sm">
         <p>👉 পরীক্ষার জন্য, OTP হল <b>123456</b></p>
       </div>
-       <div id="step3-message" class="text-center text-sm mt-4 h-5"></div>
+      <div id="step3-message" class="text-center text-sm mt-4 h-5"></div>
       <button onclick="verifyOTP()" class="w-full mt-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-         ভেরিফাই করুন
+        ভেরিফাই করুন
+      </button>
+    </div>
+    
+    <!-- Step 4: Refer Friends -->
+    <div id="step-4" class="step hidden">
+      <h2 class="text-xl font-semibold mb-1 text-gray-800">ধাপ ৩: বন্ধুদের রেফার করুন</h2>
+      <p class="text-gray-500 mb-4">অফারটি পেতে আপনার দুই বন্ধুর হোয়াটসঅ্যাপ নম্বর দিন।</p>
+      <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-3 rounded-r-lg my-4 text-sm">
+        <p>ℹ️ আপনার দেওয়া নম্বরগুলিতে আমাদের দোকানের একটি বিজ্ঞাপন পাঠানো হবে।</p>
+      </div>
+      <div class="space-y-4">
+        <input type="tel" id="friend1" placeholder="বন্ধুর হোয়াটসঅ্যাপ নম্বর ১" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
+        <input type="tel" id="friend2" placeholder="বন্ধুর হোয়াটসঅ্যাপ নম্বর ২" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition">
+      </div>
+      <div id="step4-message" class="text-center text-sm mt-4 h-5"></div>
+      <button onclick="submitFriendNumbers()" class="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+        জমা দিন
       </button>
     </div>
 
-    <!-- Step 4: Social Share -->
-    <div id="step-4" class="step hidden">
-      <h2 class="text-xl font-semibold mb-4 text-gray-800">ধাপ ৩: ফেসবুক পেজ ফলো করুন</h2>
+    <!-- Step 5: Social Share -->
+    <div id="step-5" class="step hidden">
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">ধাপ ৪: ফেসবুক পেজ ফলো করুন</h2>
       <div class="bg-gray-100 p-4 rounded-xl text-sm space-y-3">
         <p class="text-base">আপনার ক্যাশব্যাক কোড পেতে, অনুগ্রহ করে আমাদের ফেসবুক পেজটি ফলো করুন এবং সর্বশেষ পোস্টটি শেয়ার করুন।</p>
-         <a href="https://www.facebook.com/Friendscomputerandmobile" target="_blank" class="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
-            ফেসবুক পেজ ফলো করুন
+        <a href="https://www.facebook.com/Friendscomputerandmobile" target="_blank" class="inline-block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out">
+          ফেসবুক পেজ ফলো করুন
         </a>
         <p class="text-xs text-gray-500 pt-2">ℹ️ দোকানে আপনার শেয়ার করা পোস্ট এবং OTP Date যাচাই করা হবে। পোস্ট ডিলিট করলে অফারটি বাতিল হয়ে যাবে।</p>
       </div>
@@ -111,17 +128,17 @@
       </button>
     </div>
 
-    <!-- Step 5: Thank You -->
-    <div id="step-5" class="step hidden text-center">
-        <div class="flex justify-center mb-4">
-            <svg class="w-20 h-20 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        </div>
+    <!-- Step 6: Thank You -->
+    <div id="step-6" class="step hidden text-center">
+      <div class="flex justify-center mb-4">
+        <svg class="w-20 h-20 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      </div>
       <h2 class="text-2xl font-bold text-green-600 mb-4">✅ ধন্যবাদ! আপনি সফলভাবে রেজিস্টার করেছেন।</h2>
       <div id="cashback-details" class="bg-orange-100 border-2 border-dashed border-orange-400 p-4 rounded-lg mb-4">
         <!-- Cashback details will be inserted here -->
       </div>
       <p class="text-gray-700">অবশ্যই দোকানে এসে কেনাকাটা করুন এবং আপনার ক্যাশব্যাক সংগ্রহ করুন।</p>
-       <p class="text-gray-500 text-sm mt-2">এই কোডটি আপনার হোয়াটসঅ্যাপ নম্বরেও পাঠানো হয়েছে।</p>
+      <p class="text-gray-500 text-sm mt-2">এই কোডটি আপনার হোয়াটসঅ্যাপ নম্বরেও পাঠানো হয়েছে।</p>
       <p class="text-gray-700 mt-4 font-semibold">শুভ দুর্গাপূজা!</p>
     </div>
   </div>
@@ -140,11 +157,11 @@
         if (stepId === stepNumber) {
           step.classList.remove("hidden");
           setTimeout(() => step.classList.remove('fade-out'), 10);
-           setTimeout(() => step.classList.add('fade-in'), 10);
+          setTimeout(() => step.classList.add('fade-in'), 10);
         } else {
           step.classList.add('fade-out');
           step.classList.remove('fade-in');
-           setTimeout(() => step.classList.add('hidden'), 500);
+          setTimeout(() => step.classList.add('hidden'), 500);
         }
       });
     }
@@ -174,7 +191,7 @@
       const interest = document.getElementById("interest").value;
       const otherInterest = document.getElementById("other-interest").value.trim();
 
-      // Simple regex for 10-digit mobile number
+      // Regex for 10-digit Indian mobile number
       const mobileRegex = /^[6-9]\d{9}$/;
 
       if (!name) {
@@ -189,7 +206,7 @@
           showMessage(2, 'অনুগ্রহ করে আপনার আগ্রহ নির্বাচন করুন।', true);
           return;
       }
-       if (interest === 'Other' && !otherInterest) {
+      if (interest === 'Other' && !otherInterest) {
           showMessage(2, 'অনুগ্রহ করে আপনার আগ্রহ নির্দিষ্ট করুন।', true);
           return;
       }
@@ -213,25 +230,52 @@
         showMessage(3, '❌ ভুল OTP। আবার চেষ্টা করুন।', true);
       }
     }
+
+    function submitFriendNumbers() {
+        const friend1 = document.getElementById('friend1').value.trim();
+        const friend2 = document.getElementById('friend2').value.trim();
+        const userWhatsapp = document.getElementById('whatsapp').value.trim();
+        const mobileRegex = /^[6-9]\d{9}$/;
+
+        if (!friend1 || !friend2) {
+            showMessage(4, 'অনুগ্রহ করে দুটি বন্ধুর নম্বর দিন।', true);
+            return;
+        }
+        if (!mobileRegex.test(friend1) || !mobileRegex.test(friend2)) {
+            showMessage(4, 'অনুগ্রহ করে দুটি বৈধ ১০-সংখ্যার মোবাইল নম্বর দিন।', true);
+            return;
+        }
+        if (friend1 === friend2) {
+            showMessage(4, 'দুটি নম্বর একই হতে পারে না।', true);
+            return;
+        }
+        if (friend1 === userWhatsapp || friend2 === userWhatsapp) {
+            showMessage(4, 'আপনি নিজের নম্বরটি দিতে পারবেন না।', true);
+            return;
+        }
+
+        showMessage(4, '✅ নম্বরগুলি সফলভাবে জমা দেওয়া হয়েছে!');
+        setTimeout(() => {
+          showStep(5);
+          showMessage(4, '');
+        }, 1500);
+    }
     
     function generateCashbackAndFinish() {
-        // Generate random cashback amount between 50 and 500
-        const cashbackAmount = Math.floor(Math.random() * (750 - 50 + 1)) + 50;
         // Generate a unique code
         const cashbackCode = `FCM${Math.floor(1000 + Math.random() * 9000)}`;
         
         const detailsContainer = document.getElementById('cashback-details');
         detailsContainer.innerHTML = `
-            <p class="text-gray-800">আপনার ক্যাশব্যাক অ্যামাউন্ট:</p>
-            <p class="text-4xl font-bold text-red-600 my-2">₹${cashbackAmount}</p>
-            <p class="text-gray-800">আপনার ক্যাশব্যাক কোড:</p>
-            <p class="text-2xl font-bold text-indigo-600 bg-indigo-100 py-1 px-3 rounded-lg inline-block">${cashbackCode}</p>
+            <p class="text-gray-800">আপনার কুপন কোড:</p>
+            <p class="text-3xl font-bold text-indigo-600 bg-indigo-100 py-2 px-4 rounded-lg inline-block my-2">${cashbackCode}</p>
+            <p class="text-gray-600 text-sm mt-2">আপনি এই কুপন কোড ব্যবহার করে <b>₹750 পর্যন্ত</b> ক্যাশব্যাক পেতে পারেন।</p>
         `;
         
         // This is a simulation. In a real app, you would make an API call here to send the WhatsApp message.
         console.log(`Sending code ${cashbackCode} to WhatsApp.`);
 
-        showStep(5);
+        showStep(6);
     }
     
     // Initialize the first step
